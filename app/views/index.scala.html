@@ -1,0 +1,12 @@
+@import model.Domain.FormName
+@import helper._ 
+@(formname:Form[FormName])
+
+@main("Welcome to Play",formname) {
+   <div class="jumbotron">
+	     @form(routes.Application.submitform){
+			@formElements(formname)
+			<input type="submit" name="add" value="Add" class="btn btn-lg btn-success">
+		 }		
+	</div>
+}

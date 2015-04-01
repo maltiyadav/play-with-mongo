@@ -1,0 +1,5 @@
+@import model.Domain.FormName
+@(formname: Form[FormName])
+@import helper._
+@implicitField = @{ helper.FieldConstructor(BootstrapInput.f) }
+@inputText(formname("name"),'_label -> "Name", '_showConstraints -> false,'class -> "form-control")
